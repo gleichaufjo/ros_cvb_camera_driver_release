@@ -1,0 +1,10 @@
+<launch>
+<group ns="jai_camera">
+  <node name="ros_cvb_camera_driver_node" pkg="ros_cvb_camera_driver" type="ros_cvb_camera_driver_node" output="screen" >
+  	<param name="camera_name"        type="string" value="jai_camera"/>
+    <param name="camera_info_url" value="file:///home/gleichaufjo/.ros/camera_info/jai_camera.yaml" />
+  </node>
+  
+  <node name="image_proc" pkg="image_proc" type="image_proc" output="screen"/>
+  </group>
+</launch>
